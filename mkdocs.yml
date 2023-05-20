@@ -99,11 +99,17 @@ plugins:
       wikilinks: true # support wiki links -> [[]]
 
 # Hooks
-# hooks:
+hooks:
+  - overrides/hooks/on_page_markdown.py
+  - overrides/hooks/on_env.py
 #   - material/.overrides/hooks/translations.py
-
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/gh/ObsidianPublisher/assets/dist/javascript.js
 # Customization
 extra:
+  generate_graph: true #generate the graph of the site
   annotate:
     json: [.s2]
   analytics:
