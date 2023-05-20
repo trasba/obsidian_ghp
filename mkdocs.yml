@@ -1,136 +1,170 @@
-site_name: trasba # Change this to your site name
-site_description: A cool description of your site
+# Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: trasba's Digital Garden
 site_url: https://trasba.github.io/obsidian_ghp # Change this to your site URL
+site_author: trasba
+site_description: trasba's Digital Garden
+# Repository
+repo_name: trasba/obsidian_ghp
+repo_url: https://github.com/trasba/obsidian_ghp
+edit_uri: ./edit/main/docs
 
+# Copyright
+copyright: Copyright &copy; 2023 trasba
+
+# Configuration
 theme:
-    name: 'material'
-    logo: assets/meta/favicons.png
-    favicon: assets/meta/favicons.png
-    custom_dir: overrides
-    font:
-        text: Ubuntu
-        code: Ubuntu Mono
-    language: en
-    palette:
-
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: light blue
+  name: material
+  logo: assets/seed.png
+  # custom_dir: material/.overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes # documents can be directly attached to sections
+    - navigation.instant
+    - navigation.path # sponsors only 2305
+    # - navigation.prune # sponsors only 2305
+    # - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    # - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: brown
+      accent: brown
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-7
         name: Switch to dark mode
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: blue
-      accent: indigo
+    - scheme: slate
+      primary: brown
+      accent: brown
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-4
         name: Switch to light mode
-    features:
-        - navigation.indexes
-        - navigation.top
-        - navigation.tabs
-        - navigation.tabs.sticky
-        - navigation.expand
-        - search.suggest
-        - search.highlight
-        
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.ico
+  icon:
+    logo: logo
+    repo: fontawesome/brands/github
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+  - social # adds social cards
+  # - blog # add blog functionallity
+  - tags:
+      tags_file: tags.md # creates a page with all tags
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+  # - offline
+
+# Hooks
+# hooks:
+#   - material/.overrides/hooks/translations.py
+
+# Customization
+extra:
+  annotate:
+    json: [.s2]
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/trasba/obsidian_ghp
+    # - icon: fontawesome/brands/gitter
+    #   link: https://gitter.im/squidfunk/mkdocs-material
+    # - icon: fontawesome/brands/docker
+    #   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    # - icon: fontawesome/brands/python
+    #   link: https://pypi.org/project/mkdocs-material/
+    # - icon: fontawesome/brands/mastodon
+    #   link: https://fosstodon.org/@squidfunk
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/squidfunk
+
 # Extensions
 markdown_extensions:
-  - footnotes
-  - nl2br
-  - attr_list
-  - sane_lists
-  - meta
-  - smarty
-  - tables
-  - mdx_breakless_lists
-  - def_list
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.details
-  - pymdownx.magiclink
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.highlight:
-      use_pygments: true
-      anchor_linenums: true
-  - pymdownx.tasklist:
-       custom_checkbox: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - abbr
   - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: trasba
+      repo: obsidian_ghp
+  - pymdownx.mark
+  - pymdownx.smartsymbols
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-plugins:
-  - search
-  - meta-descriptions
-  - git-revision-date-localized:
-      type: date
-      fallback_to_build_date: true
-      locale: fr
-      custom_format: "%A %d %B %Y"
-      enable_creation_date: true
-  - ezlinks:
-        wikilinks: true
-  - awesome-pages
-  - embed_file:
-      callouts: true
-      custom-attributes: 'assets/css/custom_attributes.css'
-  - custom-attributes:
-      file: 'assets/css/custom_attributes.css'
-  - tags:
-      tags_file: tags.md
-  - encryptcontent:
-      title_prefix: '🔐'
-      summary: 'Private page'
-      placeholder: 'Password'
-      decryption_failure_message: 'Invalid password'
-      encryption_info_message: "You don't have access to this page."
-      search_index: 'encrypted'
-      password_button: True
-      password_button_text: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="1em" width="1em"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M416 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c17.67 0 32 14.33 32 32v256c0 17.67-14.33 32-32 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c53.02 0 96-42.98 96-96V128C512 74.98 469 32 416 32zM342.6 233.4l-128-128c-12.51-12.51-32.76-12.49-45.25 0c-12.5 12.5-12.5 32.75 0 45.25L242.8 224H32C14.31 224 0 238.3 0 256s14.31 32 32 32h210.8l-73.38 73.38c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0l128-128C355.1 266.1 355.1 245.9 342.6 233.4z"/></svg>'
-  - callouts
-  - glightbox
-hooks:
-  - overrides/hooks/on_page_markdown.py
-  - overrides/hooks/on_env.py
-extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/gh/ObsidianPublisher/assets/dist/javascript.js
-extra_css:
-    - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css
-    - https://cdn.jsdelivr.net/gh/ObsidianPublisher/assets/dist/styles.css
-    - assets/css/admonition.css
-    - assets/css/custom_attributes.css
-    - assets/css/customization.css
-extra:
-  SEO: assets/meta/SEO.png
-  comments: false #disable comments globally
-  generate_graph: true #generate the graph of the site
-  attachments: 'assets/img' #path to the folder where the attachments are stored
-  no-auto-h1: false #disable the automatic generation of h1 if no h1 is found
-  blog_list:
-    pagination: true #enable pagination
-    pagination_message: true #display the message "Showing x posts out of y"
-    pagination_translation: 'posts in' #message to display before the number of posts ; Add your own translation!
-    no_page_found: "No pages found!" #message to display when no pages are found ; Add your own translation!
-  hooks:
-    strip_comments: true
-    fix_heading: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+# ### use to manually setup navigation
+# Page tree
+# nav:
+#   - Home: index.md
+#   - Getting started:
+#       - Installation: getting-started.md
