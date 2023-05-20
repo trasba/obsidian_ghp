@@ -95,6 +95,8 @@ plugins:
   # - git-revision-date-localized:
   #     enable_creation_date: true
   # - offline
+  - ezlinks:
+      wikilinks: true # support wiki links -> [[]]
 
 # Hooks
 # hooks:
