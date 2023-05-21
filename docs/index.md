@@ -2,8 +2,11 @@
 share: true
 ---
 
-# just testing
+# trasba's Digital Garden
 
-[[./parenting/index|parenting]]
+Welcome to my digital Garden.
 
-* this is a test
+In this public section I will share stuff that might be helpful for others.
+Currently this garden is in its sprout 🌱 stage.
+
+ℹ Be aware that there will possibly be a mixture of english and german entries.
