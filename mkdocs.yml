@@ -29,7 +29,12 @@ repo_url: https://github.com/trasba/obsidian_ghp
 edit_uri: ./edit/main/docs
 
 # Copyright
-copyright: Copyright &copy; 2023 trasba
+copyright: Copyright &copy; 2023 trasba –
+  <a href="#__consent">Change cookie settings</a>
+
+# Additional css
+# extra_css:
+#   - stylesheets/extra.css
 
 # Configuration
 theme:
@@ -62,18 +67,18 @@ theme:
     # - toc.follow
     # - toc.integrate
   palette:
-    - scheme: default
-      primary: brown
-      accent: brown
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
     - scheme: slate
       primary: brown
       accent: brown
       toggle:
-        icon: material/brightness-4
+        icon: material/brightness-7
         name: Switch to light mode
+    - scheme: default
+      primary: brown
+      accent: brown
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
   font:
     text: Roboto
     code: Roboto Mono
@@ -118,16 +123,13 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/trasba/obsidian_ghp
-    # - icon: fontawesome/brands/gitter
-    #   link: https://gitter.im/squidfunk/mkdocs-material
-    # - icon: fontawesome/brands/docker
-    #   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
-    # - icon: fontawesome/brands/python
-    #   link: https://pypi.org/project/mkdocs-material/
-    # - icon: fontawesome/brands/mastodon
-    #   link: https://fosstodon.org/@squidfunk
-    # - icon: fontawesome/brands/twitter
-    #   link: https://twitter.com/squidfunk
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
 
 # Extensions
 markdown_extensions:
@@ -137,6 +139,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - tables
   - toc:
       permalink: true
   - pymdownx.arithmatex:
