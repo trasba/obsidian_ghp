@@ -1,8 +1,9 @@
 ---
 share: true
 ---
-**dashboard software for easy navigation and visualization
--> also known as homepage for your homelab**
+__dashboard software for easy navigation and visualization
+-> also known as homepage for your homelab__
+
 * [dashy](https://dashy.to/)
 	* recommended themes
 		* Adventure-Basic
@@ -18,6 +19,6 @@ share: true
 	* ➕
 		* beautiful
 		* enhanced apps with additional info
-* [homer](https://homer-demo.netlify.app/) [github](https://github.com/bastienwirtz/homer)
+* [homer](https://homer-demo.netlify.app/) [:fontawesome-brands-github:](https://github.com/bastienwirtz/homer)
 * [homarr](https://homarr.dev/)
 * [homepage](https://github.com/benphelps/homepage)
