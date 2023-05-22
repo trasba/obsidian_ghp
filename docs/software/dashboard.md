@@ -1,6 +1,8 @@
 ---
 share: true
 ---
+# dashboard
+
 __dashboard software for easy navigation and visualization
 -> also known as homepage for your homelab__
 
