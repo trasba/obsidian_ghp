@@ -1,7 +1,8 @@
 ---
 share: true
 ---
-*lab as in personal computer playground lab*
+__lab as in personal computer playground lab__
+
 * node red
 * docker
 * jupyter
