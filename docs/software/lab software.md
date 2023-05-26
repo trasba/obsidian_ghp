@@ -6,7 +6,7 @@ share: true
 _lab as in personal computer playground lab_
 
 * node red
-* docker
+* [[docker|docker]]
 * jupyter
 * dashy
 * grafana
