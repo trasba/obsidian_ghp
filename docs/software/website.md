@@ -3,17 +3,17 @@ share: true
 ---
 # website
 ## jamstack
-* [jamstack.org](https://jamstack.org/)
-:bulb: the idea is a static (precompiled) page for maximum performance
+* [jamstack.org](https://jamstack.org/)  
+  💡the idea is a static (precompiled) page for maximum performance
   * [netlify](https://www.netlify.com/)
   * [aws amplify](https://aws.amazon.com/de/amplify/)
   * [cloudflare pages](https://pages.cloudflare.com/)
   * [bejamas.io](https://bejamas.io/services/jamstack-website/)
   good overview with even more service
-## static site generators
+### static site generators
 * [hugo](https://gohugo.io/)
 * [jekyll](https://jekyllrb.com/)
-## static site hosting
+### static site hosting
 * netlify
 * vercel
 * cloudflare pages
