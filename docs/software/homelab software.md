@@ -6,7 +6,7 @@ share: true
 * node red
 * [[docker|docker]]
 * jupyter
-* dashy
+* dashy [[./dashboard|dashboard]]
 * grafana
 * calibre
 * pi-hole
