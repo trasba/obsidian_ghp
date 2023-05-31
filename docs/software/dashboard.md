@@ -8,8 +8,6 @@ share: true
     dashboard software for easy navigation and visualization
     -> also known as homepage for your homelab
 
-!!! info
-
 * [dashy](https://dashy.to/)
 	* recommended themes
 		* Adventure-Basic

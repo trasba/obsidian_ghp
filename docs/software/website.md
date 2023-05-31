@@ -13,6 +13,8 @@ share: true
 ### static site generators
 * [hugo](https://gohugo.io/)
 * [jekyll](https://jekyllrb.com/)
+	* [jekyll themes](https://jekyllthemes.io/free)
+* [gatsby](https://www.gatsbyjs.com/)
 ### static site hosting
 * netlify
 * vercel
@@ -49,4 +51,4 @@ If the Page shall have additional functionallity static might not be the way to 
 
 |from [bejamas.io](bejamas.io)|
 |---|
-|![[../Pasted image 20230526141608.png|Pasted image 20230526141608]]|
+|![[../jamstack.png|jamstack.png]]|
